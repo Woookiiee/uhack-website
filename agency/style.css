@@ -6,11 +6,14 @@
     padding: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .navbar{
     display:flex;
     justify-items: center;
     align-items: center;
-    position: sticky;
     top: 0;
     cursor: pointer;
 
@@ -105,6 +108,7 @@
     margin-left: 250px;
     margin-top: 30px;
 }
+  
 .ndrfi img{
     padding:20px 0px 0px;
 }
@@ -145,8 +149,9 @@
     padding: 0px 65px;
 }
 
-.description{
+.description {
     font-family: 'Ubuntu', sans-serif;
+    position: relative;
 }
 
 .footer{
@@ -192,4 +197,16 @@
         opacity: 0;
 
     }
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;    
 }

@@ -24,7 +24,7 @@
     
     <section class="background fsec">
         <div class="box-main">
-            <div class="fhalf">
+            <div class="fhalf reveal">
                 <p class="heading" style="color:white;">Agencies connected with us</p>
                 <p class="h_info">The National Disaster Management Authority (NDMA) is a critical governmental 
                     organization tasked with disaster preparedness, mitigation, and management in India. Established 
@@ -42,7 +42,7 @@
         </div>
     </section>
     <section class="description">
-        <div class="ndrf">
+        <div class="ndrf reveal">
             <div class="para">
             <p class="ndrfh heading">National Disaster Response Force (NDRF)</p>
             <p class="ndrfm h_info">
@@ -53,7 +53,7 @@
             </div>
             <div class="ndrfi"><img src="images/ndrf_logo.png" alt=""></div>
         </div>
-        <div class="sdrf">
+        <div class="sdrf reveal">
             <div class="para">
             <p class="sdrfh heading">State Disaster Response Force (SDRF) </p>
             <p class="sdrfm h_info">
@@ -65,7 +65,7 @@
             </div>
             <div class="sdrfi"><img src="images/sdrf_logo.png" alt=""></div>
         </div>
-        <div class="capf">
+        <div class="capf reveal">
             <div class="para">
             <p class="capfh heading">Central Armed Police Forces (CAPFs)</p>
             <p class="capfm h_info">
@@ -84,5 +84,25 @@
         </p>
     </footer>
     <script src="js/resp.js"></script>
+    <script type="text/javascript">
+        window.addEventListener('scroll', reveal);
+
+        function reveal(){
+            var reveals = document.querySelectorAll('.reveal');
+
+            for(var i=0; i< reveals.length; i++){
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 150; 
+                
+                if(revealtop < windowheight-revealpoint){
+                    reveals[i].classList.add('active');    
+                }
+                else{
+                    reveals[i].classList.remove('active');    
+                }
+            }
+        }
+    </script>
 </body>
 </html>
