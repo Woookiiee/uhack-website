@@ -12,7 +12,7 @@
     
     <div class = "about-wrapper">
       <div class = "about-left">
-        <div class = "about-left-content">
+        <div class = "about-left-content reveal">
           <div>
             <div class = "shadow">
               <div class = "about-img">
@@ -28,7 +28,7 @@
         </div>
       </div>
 
-      <div class = "about-right">
+      <div class = "about-right reveal">
         <h1><b>About US</b><span><b>!</b></span></h1>
         <h2>Because we value your life ❤️</h2>
         
@@ -41,7 +41,7 @@
     </div>
     
     <br>
-    <div class="yo">
+    <div class="yo reveal">
         <div class ="our-team">
         <h1><b>Our Team</b></b><span><b>!</b></span></h1>
         </div><br>
@@ -165,7 +165,26 @@
     
     </div>
      
-        
+    <script type="text/javascript">
+        window.addEventListener('scroll', reveal);
+
+        function reveal(){
+            var reveals = document.querySelectorAll('.reveal');
+
+            for(var i=0; i< reveals.length; i++){
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 150; 
+                
+                if(revealtop < windowheight-revealpoint){
+                    reveals[i].classList.add('active');    
+                }
+                else{
+                    reveals[i].classList.remove('active');    
+                }
+            }
+        }
+    </script>    
       
     
   </body>
