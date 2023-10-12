@@ -126,7 +126,7 @@ section i{
 .media li{
     margin: 20px 30px;
 }
-@media screen and (max-width: 900px){
+@media screen and (max-width: 992px){
     body{
         background-repeat: repeat-y;
         overflow: auto;
